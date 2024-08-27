@@ -1,8 +1,8 @@
 import Recipe from "./Recipe"
-export default function RecipeList({recipeData}){
+export default function RecipeList({setRecipeId,recipeData}){
     return (<div>
         {recipeData.map((recipe)=>(
-            <Recipe key={recipe.id} recipe={recipe}></Recipe>
+            <Recipe setRecipeId={setRecipeId} key={recipe.id} recipe={recipe}></Recipe>
         ))}
     </div>)
 }
